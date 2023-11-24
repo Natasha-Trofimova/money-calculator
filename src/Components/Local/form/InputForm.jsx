@@ -14,7 +14,6 @@ function InputForm() {
 
   return (
     <>
-      InputForm
       <InputFormCss
         value={txt}
         type={"text"}

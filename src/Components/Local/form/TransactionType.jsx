@@ -12,18 +12,12 @@ function TransactionType() {
   const {toggle} =useContext(TypeContext)
 
   const [typeTransaction] = useState()
-  // const toggle = (event) => {
-  //   setTypeTransaction(event.target.value);
-  // }
 
   return (
     <>
-      <br />
-      radio<br />
       <FormControl>
         Тип транзакции
         {/* <FormLabel id="demo-row-radio-buttons-group-label">Тип транзакции</FormLabel> */}
-
         <RadioGroup
           row
           value={typeTransaction}
@@ -32,9 +26,6 @@ function TransactionType() {
             typeTransaction(event.target.value)
           }}
 
-          // onChange={toggle}
-
-          // 
         // aria-labelledby="demo-row-radio-buttons-group-label"
         // name="row-radio-buttons-group"
         >

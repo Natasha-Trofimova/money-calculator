@@ -1,5 +1,7 @@
 // ExpenseIncome
 import { useContext } from "react"
+import Expense from "./ExpenseIncome/Expense"
+import Income from "./ExpenseIncome/Income"
 import { TypeContext } from "./TypeContext"
 
 
@@ -12,10 +14,18 @@ function ExpenseIncome() {
   return (
     <>
       <div>
-        FormShow<br />
-        отображение <br/>
         {typeTransaction}
       </div>
+
+      {
+        typeTransaction === 'Доход' &&
+        <Income />
+      }
+
+      {
+        typeTransaction === 'Расход' &&
+        <Expense />
+      }
 
     </>
   )

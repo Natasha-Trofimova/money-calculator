@@ -1,9 +1,14 @@
 import { useState } from "react"
 import ExpenseIncome from "./ExpenseIncome"
 import InputForm from "./InputForm"
+import css from "./Styled.css"
 import TransactionType from "./TransactionType"
 
 import { TypeContext } from "./TypeContext"
+
+import { TxtInputContext } from "../../Context/TxtImput"
+import { useContext } from "react"
+
 
 function Form() {
 
@@ -11,24 +16,42 @@ function Form() {
   //   const toggle = (event) => {
   //   setTypeTransaction(event.target.value);
   // }
+  const { FormCss, FormContainer, Button } = css
+
+  const { txt } = useContext(TxtInputContext)
+  
 
   return (
     <>
-    <br />
-      form<br />
-      <TypeContext.Provider
-      value={{
-        typeTransaction,
-        toggle: setTypeTransaction
-      }}>
-      <br />
-      <TransactionType/>
-      <br />
-      <InputForm />
-      <br />
-      тип расхода или дохода
-      <ExpenseIncome/>
-      </TypeContext.Provider>
+      <FormCss>
+        <TypeContext.Provider
+          value={{
+            typeTransaction,
+            toggle: setTypeTransaction
+          }}>
+
+          <FormContainer>
+            <TransactionType />
+          </FormContainer>
+
+          <InputForm />
+
+          тип расхода или дохода
+          <FormContainer>
+            <ExpenseIncome />
+          </FormContainer>
+       
+        кнопка передачи
+        <Button
+        >
+        Сохранить транзакцию
+        </Button>
+
+        тип:  {typeTransaction}<br/>
+        сумма:  {txt} рублей<br/>
+        тип расхода\дохода:  <br/>
+        </TypeContext.Provider>
+      </FormCss>
     </>
   )
 }

@@ -9,6 +9,7 @@ import { TypeContext } from "./Context/TypeContext"
 import { TxtInputContext } from "./Context/TxtImput"
 // import { useContext } from "react"
 import { TypeIncome } from "./Context/TypeIncome"
+import ButtonForm from "./ButtonForm"
 
 function Form() {
 
@@ -18,7 +19,7 @@ function Form() {
   //   const toggle = (event) => {
   //   setTypeTransaction(event.target.value);
   // }
-  const { FormCss, FormContainer, Button } = css
+  const { FormCss, FormContainer } = css
 
   // const { txt } = useContext(TxtInputContext)
   const [typeIncome, setTypeIncome] = useState()
@@ -56,11 +57,7 @@ function Form() {
                 <ExpenseIncome />
               </FormContainer>
 
-              кнопка передачи
-              <Button
-              >
-                Сохранить транзакцию
-              </Button>
+              <ButtonForm/>
 
               тип:  {typeTransaction}<br />
               сумма:  {txt} рублей<br />

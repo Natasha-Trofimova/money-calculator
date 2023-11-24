@@ -5,7 +5,7 @@ import FormControl from '@mui/material/FormControl';
 import { useState } from 'react';
 // import FormLabel from '@mui/material/FormLabel';
 import { useContext } from "react"
-import { TypeContext } from './TypeContext';
+import { TypeContext } from './Context/TypeContext';
 
 function TransactionType() {
 

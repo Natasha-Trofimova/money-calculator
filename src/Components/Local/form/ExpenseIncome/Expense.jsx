@@ -1,5 +1,3 @@
-// ExpenseIncome
-
 
 
 function Expense() {

@@ -2,7 +2,7 @@
 import { useContext } from "react"
 import Expense from "./ExpenseIncome/Expense"
 import Income from "./ExpenseIncome/Income"
-import { TypeContext } from "./TypeContext"
+import { TypeContext } from "./Context/TypeContext"
 
 
 

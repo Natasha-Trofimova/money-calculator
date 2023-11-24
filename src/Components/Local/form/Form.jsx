@@ -4,9 +4,9 @@ import InputForm from "./InputForm"
 import css from "./Styled.css"
 import TransactionType from "./TransactionType"
 
-import { TypeContext } from "./TypeContext"
+import { TypeContext } from "./Context/TypeContext"
 
-import { TxtInputContext } from "../../Context/TxtImput"
+import { TxtInputContext } from "./Context/TxtImput"
 import { useContext } from "react"
 
 

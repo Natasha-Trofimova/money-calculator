@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useContext } from "react"
-import { TxtInputContext } from "../../Context/TxtImput"
+import { TxtInputContext } from "./Context/TxtImput"
 import css from "./Styled.css"
 
 const { InputFormCss } = css

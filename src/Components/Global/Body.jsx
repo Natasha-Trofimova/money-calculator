@@ -5,23 +5,23 @@ import Stat from "../Pages/Stat"
 import css from "./Styled.css"
 
 import { Routes, Route } from 'react-router-dom'
-import { TxtInputContext } from '../Local/form/Context/TxtImput'
-import { useState } from 'react'
+// import { TxtInputContext } from '../Local/form/Context/TxtImput'
+// import { useState } from 'react'
 
 const { BodyrContainer } = css
 
 function Body() {
 
-  const [txt, setTxt] = useState()
+  // const [txt, setTxt] = useState()
 
   return (
     <>
-    <TxtInputContext.Provider
+    {/* <TxtInputContext.Provider
     value={{
       txt,
       onChange1: setTxt
     }}
-    >
+    > */}
 
 
     <BodyrContainer >
@@ -52,7 +52,7 @@ function Body() {
 
       </BodyrContainer>
 
-    </TxtInputContext.Provider>
+    {/* </TxtInputContext.Provider> */}
      
     </>
   )

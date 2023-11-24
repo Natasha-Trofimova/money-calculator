@@ -7,10 +7,12 @@ import TransactionType from "./TransactionType"
 import { TypeContext } from "./Context/TypeContext"
 
 import { TxtInputContext } from "./Context/TxtImput"
-import { useContext } from "react"
-
+// import { useContext } from "react"
+import { TypeIncome } from "./Context/TypeIncome"
 
 function Form() {
+
+  const [txt, setTxt] = useState()
 
   const [typeTransaction, setTypeTransaction] = useState()
   //   const toggle = (event) => {
@@ -18,39 +20,57 @@ function Form() {
   // }
   const { FormCss, FormContainer, Button } = css
 
-  const { txt } = useContext(TxtInputContext)
-  
+  // const { txt } = useContext(TxtInputContext)
+  const [typeIncome, setTypeIncome] = useState()
+
 
   return (
     <>
       <FormCss>
-        <TypeContext.Provider
+        <TxtInputContext.Provider
           value={{
-            typeTransaction,
-            toggle: setTypeTransaction
-          }}>
-
-          <FormContainer>
-            <TransactionType />
-          </FormContainer>
-
-          <InputForm />
-
-          тип расхода или дохода
-          <FormContainer>
-            <ExpenseIncome />
-          </FormContainer>
-       
-        кнопка передачи
-        <Button
+            txt,
+            onChange1: setTxt
+          }}
         >
-        Сохранить транзакцию
-        </Button>
+          <TypeContext.Provider
+            value={{
+              typeTransaction,
+              toggle: setTypeTransaction
+            }}>
 
-        тип:  {typeTransaction}<br/>
-        сумма:  {txt} рублей<br/>
-        тип расхода\дохода:  <br/>
-        </TypeContext.Provider>
+            <TypeIncome.Provider
+              value={{
+                typeIncome,
+                togglTypeIncome: setTypeIncome
+              }}
+            >
+              <FormContainer>
+                <TransactionType />
+              </FormContainer>
+
+              <InputForm />
+
+              тип расхода или дохода
+              <FormContainer>
+                <ExpenseIncome />
+              </FormContainer>
+
+              кнопка передачи
+              <Button
+              >
+                Сохранить транзакцию
+              </Button>
+
+              тип:  {typeTransaction}<br />
+              сумма:  {txt} рублей<br />
+              тип расхода\дохода:  {typeIncome}<br />
+            </TypeIncome.Provider>
+
+
+          </TypeContext.Provider>
+        </TxtInputContext.Provider>
+
       </FormCss>
     </>
   )

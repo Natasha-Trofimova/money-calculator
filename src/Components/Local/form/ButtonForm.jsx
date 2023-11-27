@@ -18,7 +18,6 @@ const {typeIncome} = useContext(TypeIncome)
       <Button>
         Сохранить транзакцию
       </Button>
-      кнопка передачи<br />
       тип:  {typeTransaction}<br />
       сумма:  {txt} рублей<br />
       тип расхода\дохода:  {typeIncome}<br />

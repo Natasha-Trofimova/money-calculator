@@ -14,6 +14,7 @@ function ExpenseIncome() {
       {/* <div>
         {typeTransaction}
       </div> */}
+
       {
         typeTransaction === 'Доход' &&
         <Income />

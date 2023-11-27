@@ -5,18 +5,15 @@ import Income from "./ExpenseIncome/Income"
 import { TypeContext } from "./Context/TypeContext"
 
 
-
 function ExpenseIncome() {
 
   const { typeTransaction } = useContext(TypeContext)
 
-
   return (
     <>
-      <div>
+      {/* <div>
         {typeTransaction}
-      </div>
-
+      </div> */}
       {
         typeTransaction === 'Доход' &&
         <Income />
@@ -26,7 +23,6 @@ function ExpenseIncome() {
         typeTransaction === 'Расход' &&
         <Expense />
       }
-
     </>
   )
 }

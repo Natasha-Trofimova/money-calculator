@@ -21,7 +21,7 @@ function Income() {
 
   return (
     <>
-      инпут доход
+      {/* инпут доход */}
       <InputFormCss
         value={typeIncome}
         type={"text"}

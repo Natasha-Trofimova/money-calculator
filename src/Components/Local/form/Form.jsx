@@ -52,16 +52,17 @@ function Form() {
 
               <InputForm />
 
-              тип расхода или дохода
+              {/* тип расхода или дохода */}
               <FormContainer>
                 <ExpenseIncome />
               </FormContainer>
 
               <ButtonForm/>
 
-              тип:  {typeTransaction}<br />
+              {/* тип:  {typeTransaction}<br />
               сумма:  {txt} рублей<br />
-              тип расхода\дохода:  {typeIncome}<br />
+              тип расхода\дохода:  {typeIncome}<br />  */}
+            
             </TypeIncome.Provider>
 
 

@@ -8,9 +8,9 @@ function ButtonForm() {
   const { Button } = css
 
   const { typeTransaction } = useContext(TypeContext)
-  const { txt } = useContext(TxtInputContext)
+  const { amountTransaction } = useContext(TxtInputContext)
 
-const {typeIncome} = useContext(TypeIncome)
+const {inputComment} = useContext(TypeIncome)
 
   return (
     <>
@@ -19,10 +19,42 @@ const {typeIncome} = useContext(TypeIncome)
         Сохранить транзакцию
       </Button>
       тип:  {typeTransaction}<br />
-      сумма:  {txt} рублей<br />
-      тип расхода\дохода:  {typeIncome}<br />
+      сумма:  {amountTransaction} рублей<br />
+      тип расхода\дохода:  {inputComment}<br />
     </>
   )
 }
 
 export default ButtonForm
+
+// const validation = () => {
+//   if (typeTransaction.length > 0 && txt && typeIncome) {
+//     console.log('validation proshla')
+
+//     //так не стоит делать почему то, потому что это просто строка
+
+//     const dataLine = `${typeTransaction}::${txt}::${typeIncome}`
+//     const dataLine = `${inputValue}::${inputType}::${inpComment}`
+
+//     firstAction(
+//       prev => [...prev, dataLine]
+//     )
+
+//     setInputValue('')
+//     setInputType('')
+//     setInputComment('')
+
+//   } else console.log(' ne proshla')
+// }
+
+
+{/* <Button
+backgroundColor={
+  inputValue && inputType && inpComment ?
+    "#95DB7B" :
+    "#B9B9B9"
+}
+onClick={validation}
+>
+Сохранить транзакцию
+</Button> */}

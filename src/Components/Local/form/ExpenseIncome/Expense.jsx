@@ -13,8 +13,8 @@ import { TypeIncome } from "../Context/TypeIncome"
 // Type of expenses
 function Expense() {
 
-  const {togglTypeIncome} =useContext(TypeIncome)
-  const [typeIncome] = useState()
+  const {togglInputComment} =useContext(TypeIncome)
+  const [inputComment] = useState()
 
 
 
@@ -23,10 +23,10 @@ function Expense() {
       <FormControl>
         <FormLabel id="demo-row-radio-buttons-group-label">Выберите тип расхода</FormLabel>
         <RadioGroup
-          value={typeIncome} 
+          value={inputComment} 
           onChange={event => {
-            togglTypeIncome(event.target.value) 
-            typeIncome(event.target.value) 
+            togglInputComment(event.target.value) 
+            inputComment(event.target.value) 
           }}
 
         // aria-labelledby="demo-row-radio-buttons-group-label"

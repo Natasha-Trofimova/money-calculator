@@ -15,21 +15,21 @@ function Income() {
 
   // const {onChange1} =useContext(TxtInputContext)
   // const [txt, setTxt] = useState()
-  const [typeIncome, setTypeIncome] = useState()
-  const {togglTypeIncome} =useContext(TypeIncome)
+  const [inputComment, setInputComment] = useState()
+  const {togglInputComment} =useContext(TypeIncome)
 
 
   return (
     <>
       {/* инпут доход */}
       <InputFormCss
-        value={typeIncome}
+        value={inputComment}
         type={"text"}
         placeholder={"Введите тип дохода"}
         maxLength={"100"}
         onChange={event => {
-          togglTypeIncome(event.target.value)
-          setTypeIncome(event.target.value)
+          togglInputComment(event.target.value)
+          setInputComment(event.target.value)
         }}
       />
 

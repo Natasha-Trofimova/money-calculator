@@ -1,59 +1,32 @@
-import { useState } from "react"
-
 import css from "./Styled.css"
 
 import ExpenseIncome from "./ExpenseIncome"
 import InputForm from "./InputForm"
 import TransactionType from "./TransactionType"
-import ButtonForm from "./ButtonForm"
+import ButtonRecording from "./Button/ButtonRecording"
 
-import { TypeContext } from "./Context/TypeContext"
-import { TxtInputContext } from "./Context/TxtImput"
-import { TypeIncome } from "./Context/TypeIncome"
 
 function Form() {
 
-  const [amountTransaction, setAmountTransaction] = useState()
-  const [typeTransaction, setTypeTransaction] = useState()
   const { FormCss, FormContainer } = css
-  const [inputComment, setInputComment] = useState()
+
 
   return (
     <>
       <FormCss>
-        <TxtInputContext.Provider
-          value={{
-            amountTransaction,
-            onChange1: setAmountTransaction
-          }}
-        >
-          <TypeContext.Provider
-            value={{
-              typeTransaction,
-              toggle: setTypeTransaction
-            }}>
+        <FormContainer>
+          <TransactionType />
+        </FormContainer>
 
-            <TypeIncome.Provider
-              value={{
-                inputComment,
-                togglInputComment: setInputComment
-              }}
-            >
-              <FormContainer>
-                <TransactionType />
-              </FormContainer>
+        <InputForm />
 
-              <InputForm />
+        {/* тип расхода или дохода */}
+        <ExpenseIncome />
 
-              {/* тип расхода или дохода */}
-              <ExpenseIncome />
+        {/* <ButtonForm /> */}
 
-              <ButtonForm />
-
-            </TypeIncome.Provider>
-          </TypeContext.Provider>
-        </TxtInputContext.Provider>
-
+        {/* запист */}
+        <ButtonRecording />
       </FormCss>
     </>
   )

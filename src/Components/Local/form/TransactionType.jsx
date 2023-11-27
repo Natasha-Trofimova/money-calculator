@@ -5,11 +5,11 @@ import FormControl from '@mui/material/FormControl';
 import { useState } from 'react';
 // import FormLabel from '@mui/material/FormLabel';
 import { useContext } from "react"
-import { TypeContext } from './Context/TypeContext';
+import {InputInfo} from "./../../Context/InputInfo"
 
 function TransactionType() {
 
-  const {toggle} =useContext(TypeContext)
+  const {toggle} =useContext(InputInfo)
 
   const [typeTransaction] = useState()
 
@@ -23,9 +23,7 @@ function TransactionType() {
           value={typeTransaction}
           onChange={event => {
             toggle(event.target.value)
-            typeTransaction(event.target.value)
           }}
-
         // aria-labelledby="demo-row-radio-buttons-group-label"
         // name="row-radio-buttons-group"
         >

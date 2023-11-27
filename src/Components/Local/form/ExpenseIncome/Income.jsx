@@ -1,8 +1,6 @@
 import { useState } from "react"
 import { useContext } from "react"
-
-import { TypeIncome } from "../Context/TypeIncome"
-
+import { InputInfo } from "../../../Context/InputInfo"
 import css from "../Styled.css"
 const { InputFormCss } = css
 
@@ -11,13 +9,8 @@ const { InputFormCss } = css
 
 function Income() {
 
-
-
-  // const {onChange1} =useContext(TxtInputContext)
-  // const [txt, setTxt] = useState()
   const [inputComment, setInputComment] = useState()
-  const {togglInputComment} =useContext(TypeIncome)
-
+  const {togglInputComment} =useContext(InputInfo)
 
   return (
     <>

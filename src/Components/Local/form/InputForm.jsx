@@ -1,27 +1,24 @@
 import { useState } from "react"
 import { useContext } from "react"
-import { TxtInputContext } from "./Context/TxtImput"
+import { InputInfo } from "../../Context/InputInfo"
 import css from "./Styled.css"
 
 const { InputFormCss } = css
 
 function InputForm() {
 
-
-
-  const {onChange1} =useContext(TxtInputContext)
-  const [txt, setTxt] = useState()
+  const {onChange1} =useContext(InputInfo)
+  const [amountTransaction, ] = useState()
 
   return (
     <>
       <InputFormCss
-        value={txt}
+        value={amountTransaction}
         type={"text"}
         placeholder={"Введите сумму транзакции"}
         maxLength={"100"}
         onChange={event => {
           onChange1(event.target.value)
-          setTxt(event.target.value)
         }}
       />
     </>

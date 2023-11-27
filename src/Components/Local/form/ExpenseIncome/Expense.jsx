@@ -4,16 +4,13 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import { useContext } from "react"
-// import { TypeContext } from '../Context/TypeContext'; 
 import { useState } from 'react';
+import { InputInfo } from '../../../Context/InputInfo';
 
-import { TypeIncome } from "../Context/TypeIncome"
 
-
-// Type of expenses
 function Expense() {
 
-  const {togglInputComment} =useContext(TypeIncome)
+  const {togglInputComment} =useContext(InputInfo)
   const [inputComment] = useState()
 
 
@@ -26,7 +23,6 @@ function Expense() {
           value={inputComment} 
           onChange={event => {
             togglInputComment(event.target.value) 
-            inputComment(event.target.value) 
           }}
 
         // aria-labelledby="demo-row-radio-buttons-group-label"
@@ -47,20 +43,3 @@ function Expense() {
 }
 
 export default Expense
-
-// import { useState } from 'react';
-//  import FormLabel from '@mui/material/FormLabel';
-// import { useContext } from "react"
-// import { TypeContext } from './Context/TypeContext';
-
-
-  // const {toggle} =useContext(TypeContext)
-
-  // const [typeTransaction] = useState()
-
-  // return (
-    // <>
-      // 
-    // </>
-  // )
-// }

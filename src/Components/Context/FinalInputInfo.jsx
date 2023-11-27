@@ -1,7 +1,7 @@
 import { createContext } from "react";
 
 // для передачи всей вводимой информации
-export const InputInfo = createContext()
+export const FinalInputInfo = createContext()
 
 
 

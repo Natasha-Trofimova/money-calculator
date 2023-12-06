@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useContext } from "react"
 import { InputInfo } from "../../../Context/InputInfo"
-import css from "../Styled.css"
+import css from "../StyledForm.css"
 const { InputFormCss } = css
 
 
@@ -9,7 +9,7 @@ const { InputFormCss } = css
 
 function Income() {
 
-  const [inputComment, setInputComment] = useState()
+  const [inputComment, ] = useState()
   const {togglInputComment} =useContext(InputInfo)
 
   return (
@@ -22,7 +22,6 @@ function Income() {
         maxLength={"100"}
         onChange={event => {
           togglInputComment(event.target.value)
-          setInputComment(event.target.value)
         }}
       />
 

@@ -1,0 +1,11 @@
+.cell{
+  padding: 4px;
+}
+
+.line{
+  width: 100%;
+  display: flex;
+  padding: 2px;
+  flex-direction: row;
+  justify-content: flex-start;
+}

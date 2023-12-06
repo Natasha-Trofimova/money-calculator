@@ -1,8 +1,15 @@
 import styled from "styled-components"
 
 const css = {
-  FormCss: styled.div`
-  margin-top: 8px;
+  PagCss: styled.div`
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+`,
+FormCss: styled.div`
   opacity: 0.7;
   display: flex;
   position: relative;
@@ -34,34 +41,32 @@ FormContainer: styled.div`
     align-items: center;
     padding: 7px;
 `,
-  InputFormCss: styled.input`
-margin: 5px;
-padding: 3px;
-color: black;
-border-radius: 6px;
-background-color: #B9B9B9;
+Button: styled.button`
 display: block;
 position: relative;
-width: 234px;
-height: 40px;
-outline: none;
-border: none;
-  `,
-  Button: styled.button`
-  display: block;
-  position: relative;
-  width: 180px;
-  height: 30px;
-  cursor: pointer;
-  border-radius: 6px;
-  margin: 5px;
-  margin-bottom: 10px;
-  padding: 3px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: ${props => props.backgroundColor};
-  
-  `
+width: 180px;
+height: 30px;
+cursor: pointer;
+border-radius: 6px;
+margin: 5px;
+margin-bottom: 10px;
+padding: 3px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: ${props => props.backgroundColor};
+`,
+FormShowCss: styled.div`
+opacity: 0.7;
+display: flex;
+flex-direction: column;
+align-items: center;
+min-height: 146px;
+min-width: 17%%;
+background-color: #F9F871;
+color: black;
+border-radius: 6px;
+padding: 7px;
+`,
 }
 export default css

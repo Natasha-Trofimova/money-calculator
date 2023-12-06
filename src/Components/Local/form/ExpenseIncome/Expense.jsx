@@ -24,7 +24,6 @@ function Expense() {
           onChange={event => {
             togglInputComment(event.target.value) 
           }}
-
         // aria-labelledby="demo-row-radio-buttons-group-label"
         // name="row-radio-buttons-group"
         >
